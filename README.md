@@ -5,7 +5,7 @@ My scripts that are going to be broken with the new client for https://arras.io.
 2. FOV Script. Used a proxy for detecting the packet arrays and modified the packet which contained the FOV value. 
 3. B1 Swarmlord. This was a bot that had other alt tabs follow the leader tab around. It used a special global object value that usually changed so even if you were to run this on the old client it still wouldn't work until you updated the special values for the Arras('') global object. That said, that object is gone now so this won't work at all anymore. 
 
-Here's a clip of a minimap script (there's no 1m+ here)
+Here's a clip of a minimap script (there's no 1m+ here, also the entire map is freezing up at points due to poor connection, not because of the script)
 [video-2022-11-08t175602080_REr5orxC (2).webm](https://user-images.githubusercontent.com/97923189/202818751-5aa9f842-38cb-4777-bfd6-1d13e1aa47d9.webm)
 
 A clip of the B1 Swarmlord
