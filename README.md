@@ -12,4 +12,5 @@ A clip of the B1 Swarmlord
 [video_-_2022-10-10T142435.604.webm](https://user-images.githubusercontent.com/97923189/202819011-5f4fba52-6c86-4361-a0b3-039c0a6731f8.webm)
 
 A clip of the FOV script (client doesn't render over a certain amount no matter what, so extra FOV only goes up to around 2 tiles)
-[video_-_2022-11-07T191110.127.webm](https://user-images.githubusercontent.com/97923189/202819439-1d7760df-d93f-4205-8c31-d23e1aac7dc4.webm)
+[video - 2022-11-18T182553.580.webm](https://user-images.githubusercontent.com/97923189/202819555-d1f722b5-2159-407b-a50e-73a29dc90a9b.webm)
+
