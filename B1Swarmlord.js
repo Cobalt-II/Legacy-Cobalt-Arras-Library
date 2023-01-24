@@ -1,7 +1,7 @@
 // At the time I used Arras() global obj, however it's pretty easy to rewrite it for other packet methods.
 window.choice = -1;
 window.build = [12, 12, 0, 0, 0, 0, 0, 12, 6, 0];
-localStorage.command = true;
+localStorage.command = 1;
 localStorage.color = 10;
 let lock = true;
 
