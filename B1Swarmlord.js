@@ -5,6 +5,7 @@ localStorage.command = 1;
 localStorage.color = 10;
 let lock = true;
 
+// Also a working script of mine nested inside of this. Set localStorage.command to 0 for all tabs in menu to join one server, allows for 4 players at once.
 function pressEnter() {
     document.dispatchEvent(
         new KeyboardEvent("keydown", {
