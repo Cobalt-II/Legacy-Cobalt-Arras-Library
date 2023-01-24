@@ -511,33 +511,37 @@ document.addEventListener('keydown', function(event) {
                 };
 
                 if (!targetX && !lock) {
-                    if (world.camera.x > coordsX - config.range && world.camera.x < coordsX + config.range && world.camera.y > coordsY && Math.hypot(world.camera.x - coordsX, world.camera.y - coordsY) > config.dist) {
-                        Arras('').v.m('C', 0, 0, 1);
-                        ranges.x = true;
-                    }
-                    if (world.camera.x > coordsX - config.range && world.camera.x < coordsX + config.range && world.camera.y < coordsY && Math.hypot(world.camera.x - coordsX, world.camera.y - coordsY) > config.dist) {
-                        Arras('').v.m('C', 0, 0, 2);
-                        ranges.x = true;
-                    }
-                    if (world.camera.y > coordsY - config.range && world.camera.y < coordsY + config.range && world.camera.x < coordsX && Math.hypot(world.camera.x - coordsX, world.camera.y - coordsY) > config.dist) {
-                        Arras('').v.m('C', 0, 0, 8);
-                        ranges.y = true;
-                    }
-                    if (world.camera.y > coordsY - config.range && world.camera.y < coordsY + config.range && world.camera.x > coordsX && Math.hypot(world.camera.x - coordsX, world.camera.y - coordsY) > config.dist) {
-                        Arras('').v.m('C', 0, 0, 4);
-                        ranges.y = true;
-                    }
-                    if (world.camera.x < coordsX && world.camera.y < coordsY && Math.hypot(world.camera.x - coordsX, world.camera.y - coordsY) > config.dist && !ranges.x && !ranges.y) {
-                        Arras('').v.m('C', 0, 0, 10);
-                    }
-                    if (world.camera.x > coordsX && world.camera.y < coordsY && Math.hypot(world.camera.x - coordsX, world.camera.y - coordsY) > config.dist && !ranges.x && !ranges.y) {
-                        Arras('').v.m('C', 0, 0, 6);
-                    }
-                    if (world.camera.x < coordsX && world.camera.y > coordsY && Math.hypot(world.camera.x - coordsX, world.camera.y - coordsY) > config.dist && !ranges.x && !ranges.y) {
-                        Arras('').v.m('C', 0, 0, 9);
-                    }
-                    if (world.camera.x > coordsX && world.camera.y > coordsY && Math.hypot(world.camera.x - coordsX, world.camera.y - coordsY) > config.dist && !ranges.x && !ranges.y) {
-                        Arras('').v.m('C', 0, 0, 5);
+                    if (Math.hypot(world.camera.x - coordsX, world.camera.y - coordsY) > config.dist) {
+                        if (world.camera.x > coordsX - config.range && world.camera.x < coordsX + config.range && world.camera.y > coordsY) {
+                            Arras('').v.m('C', 0, 0, 1);
+                            ranges.x = true;
+                        }
+                        if (world.camera.x > coordsX - config.range && world.camera.x < coordsX + config.range && world.camera.y < coordsY) {
+                            Arras('').v.m('C', 0, 0, 2);
+                            ranges.x = true;
+                        }
+                        if (world.camera.y > coordsY - config.range && world.camera.y < coordsY + config.range && world.camera.x < coordsX) {
+                            Arras('').v.m('C', 0, 0, 8);
+                            ranges.y = true;
+                        }
+                        if (world.camera.y > coordsY - config.range && world.camera.y < coordsY + config.range && world.camera.x > coordsX) {
+                            Arras('').v.m('C', 0, 0, 4);
+                            ranges.y = true;
+                        }
+                        if (!ranges.x && !ranges.y) {
+                            if (world.camera.x < coordsX && world.camera.y < coordsY) {
+                                Arras('').v.m('C', 0, 0, 10);
+                            }
+                            if (world.camera.x > coordsX && world.camera.y < coordsY) {
+                                Arras('').v.m('C', 0, 0, 6);
+                            }
+                            if (world.camera.x < coordsX && world.camera.y > coordsY) {
+                                Arras('').v.m('C', 0, 0, 9);
+                            }
+                            if (world.camera.x > coordsX && world.camera.y > coordsY) {
+                                Arras('').v.m('C', 0, 0, 5);
+                            }
+                        }
                     }
                 } else {
                     if (!leader && !lock) {
@@ -557,17 +561,19 @@ document.addEventListener('keydown', function(event) {
                             Arras('').v.m('C', 0, 0, 4);
                             ranges.y = true;
                         }
-                        if (world.camera.x < targetX && world.camera.y < targetY && !ranges.x && !ranges.y) {
-                            Arras('').v.m('C', 0, 0, 10);
-                        }
-                        if (world.camera.x > targetX && world.camera.y < targetY && !ranges.x && !ranges.y) {
-                            Arras('').v.m('C', 0, 0, 6);
-                        }
-                        if (world.camera.x < targetX && world.camera.y > targetY && !ranges.x && !ranges.y) {
-                            Arras('').v.m('C', 0, 0, 9);
-                        }
-                        if (world.camera.x > targetX && world.camera.y > targetY && !ranges.x && !ranges.y) {
-                            Arras('').v.m('C', 0, 0, 5);
+                        if (!ranges.x && !ranges.y) {
+                            if (world.camera.x < targetX && world.camera.y < targetY) {
+                                Arras('').v.m('C', 0, 0, 10);
+                            }
+                            if (world.camera.x > targetX && world.camera.y < targetY) {
+                                Arras('').v.m('C', 0, 0, 6);
+                            }
+                            if (world.camera.x < targetX && world.camera.y > targetY) {
+                                Arras('').v.m('C', 0, 0, 9);
+                            }
+                            if (world.camera.x > targetX && world.camera.y > targetY) {
+                                Arras('').v.m('C', 0, 0, 5);
+                            }
                         }
 
                     }
