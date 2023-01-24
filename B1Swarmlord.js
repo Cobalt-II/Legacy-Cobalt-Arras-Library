@@ -20,7 +20,7 @@ function pressEnter() {
 };
 
 let interval = setInterval(() => {
-    if (!localStorage.command) {
+    if (!parseInt(localStorage.command)) {
         pressEnter();
         console.log('Synced connection');
         clearInterval(interval);
