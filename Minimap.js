@@ -305,9 +305,6 @@ let leader = false;
 
 for (let count = 1; count <= 4; count++) {
     localStorage.setItem('array' + count, [])
-};
-
-for (let count = 1; count <= 4; count++) {
     localStorage.setItem('ids' + count, [])
 };
 
