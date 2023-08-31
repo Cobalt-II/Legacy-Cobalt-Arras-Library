@@ -422,6 +422,6 @@ requestAnimationFrame(function draw() {
     miniWidth = dra[dra.length - 1][0] + dra[dra.length - 1][3] - dra[0][0];
     miniHeight = dra[dra.length - 1][1] + dra[dra.length - 1][3] - dra[0][1];
 
-    dra.splice(0, dra.length);
+    dra = [];
     requestAnimationFrame(draw);
 });
